@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    --bg-color: antiquewhite;
+    --f-size: 1.2em;
+}
+
+html{
+    background-color: var(--bg-color);
+}
+
+form{
+    margin: 1em auto;
+    text-align: center;
+    font-size: var(--f-size);
+}
+
+.span{
+    color: black;
+    font-style: var(--f-size);
+    text-align: center;
+    margin: 0 auto;
+}
+
