@@ -1,0 +1,11 @@
+form {
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+}
+
+span{
+    color: red;
+    font-size: 2em;
+}
+
