@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 7: Sesiones con PHP</title>
+    <title>Clase 6: Sesiones con PHP</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>

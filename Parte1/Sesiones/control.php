@@ -15,5 +15,4 @@
         header("Location: index.php?error=si");      
             //junto con ?error=si para que verifique la sesión el usuario.
     }
-
 ?>

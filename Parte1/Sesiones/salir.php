@@ -5,5 +5,4 @@
     session_destroy();    // Para cerrarla
     
     header("Location: index.php");
-
 ?>
