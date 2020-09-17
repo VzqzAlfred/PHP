@@ -1,3 +1,3 @@
 # PHP
 
-http://mysql.conclase.net/
+http://mysql.conclase.net/curso/index.php
