@@ -46,7 +46,6 @@
         echo "<strong>".$registro["id_pais"]."</strong>"." - "."<i>".$registro["pais"]."</i><br>";
     }
 
-
     
 //  6. Cerrar la base de datos.
     mysqli_close($conexion)or die("Ha ocurrido un error al cerrar la BD.");
