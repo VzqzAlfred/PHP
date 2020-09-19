@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;     /*Para que no se expandan más las cajas de los px*/
+    border: 0;
+    margin: 0;
+}
+
+    /*Para que los navegadores reconozcan la letra que estamos usando*/
+@font-face{
+    font-family: "Chalet";
+    src: url("../fonts/Chalet.eot");
+    src: url(../fonts/Chalet.eot?#iefix) format(embedded-opentype),
+         url(../fonts/Chalet.woff) format("woff"),
+         url(../fonts/Chalet.ttf) format("truetype");
+}
+
+
+a{
+    color: #F60;
+    text-decoration: none;
+}
+
+
+a:hover{
+    color: #7BBFD5;
+}
+
+
+body{
+    background-color: #FFF;
+    color: #212121;
+    font-family: "Chalet", Herlvetica, Verdana;
+    font-size: 16px;
+}
+
+
+fieldset{
+    border: .13em double #f60;
+    border-radius: .8em;
+    padding: 1em;
+}
+
+
+form{
+    display: none;
+}
+
+
+form div {
+    margin: .7em;
+}
+
+
+input[type="checkbox"],
+input[type="radio"], select{
+    background: #eee;
+    cursor: pointer;            /*Hace que aparezca una manita*/
+}
+
+
+input[type="date"], input[type="email"],
+input[type="number"], input[type="text"]{
+    background: #EEE;
+    border-radius: .50em;
+    color: #F60;
+    font-size: 1em;
+    padding: .25em;
+}
+
+
+/*Este efecto hace que cambie de color con el FOCUS*/
+input[type="date"]:focus, input[type="email"]:focus,
+input[type="number"]:focus, input[type="text"]:focus{
+    background: #C6ECF9;
+}
+
+
+input[type="file"]{
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 150px;
+}
+
+
+input[type="submit"]{
+    background: #FF9A55;
+    border-radius: 0 .4em;
+    color: #FFF;
+    font-family: "Chalete";
+    font-size: 1.5em;
+}
+
+
+input[type="submit"]:hover{
+    background: #7BB7D5;
+    border-radius: .4em 0;
+    color: #000;
+    cursor: pointer;
+}
+
+
+label{
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+
+li{
+    margin-bottom: 1em;
+}
+
+
+nav, #principal{
+    display: inline-block;
+    font-size: 1em;
+    margin: .25em;
+    text-align: left;
+    width: 20%;
+    vertical-align: top;
+}
+
+
+ul{
+    list-style: none;
+    padding-top: 3.5em;
+}
+
+
+#contenido{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5em;
+}
+
+
+#principal{
+    width: 75%;   
+}
+
+
+.adjuntar_archivo{
+    background: #EEE url(../img/boton-buscar.png) no-repeat 100% -4px;
+    border: thin solid#F60;
+    display: inline;
+    height: 300px;
+    text-align: right;
+}
+
+.adjuntar_archivo:hover{
+    background: #C6ECF9 url(../img/boton-buscar2.png) no-repeat 100% -4px;
+    cursor: pointer;
+}
+
+    /*Para que haga un cambio y tarde en cambiar de color*/
+.cambio{
+    transition: all 2.0s ease-out;
+}
