@@ -146,6 +146,7 @@ ul{
     text-align: right;
 }
 
+
 .adjuntar_archivo:hover{
     background: #C6ECF9 url(../img/boton-buscar2.png) no-repeat 100% -4px;
     cursor: pointer;

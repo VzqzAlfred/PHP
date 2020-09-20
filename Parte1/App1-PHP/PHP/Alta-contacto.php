@@ -14,8 +14,8 @@
 
         <div>
             <label for="m">Sexo: </label>
-            <input type="radio" id="m" class="cambio" name="sexo_txt" title="Tu sexo" value="M" required> <label for="m">Masculino</label>
-            <input type="radio" id="m" class="cambio" name="sexo_txt" title="Tu sexo" value="F" required> <label for="f">Femenino</label>
+            <input type="radio" id="m" class="cambio" name="sexo_rdo" title="Tu sexo" value="M" required> <label for="m">Masculino</label>
+            <input type="radio" id="m" class="cambio" name="sexo_rdo" title="Tu sexo" value="F" required> <label for="f">Femenino</label>
         </div>
 
         <div>
