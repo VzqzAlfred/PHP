@@ -5,12 +5,12 @@
     $email = $_POST["email_txt"];
     $nombre = $_POST["nombre_txt"];
     $sexo = $_POST["sexo_rdo"];
-    $nacimiento = $_POST["nacimiendo_txt"];
+    $nacimiento = $_POST["nacimiento_txt"];
     $telefono = $_POST["telefono_txt"];
     $pais = $_POST["pais_slc"];
 
     // Dependiendo el sexo ponemos una imagen predeterminada.
-    $imagen_generica = ($sexo == 'M')?"img/pictures/amigo.png":"img/pictures/amiga.png"; 
+    $imagen_generica = ($sexo == "M")?"img/pictures/amigo.png":"img/pictures/amiga.png"; 
 
     // Verificamos que no exista previmiante el email del usuario en la BD
     include("Conexion.php");
@@ -30,7 +30,7 @@
         include("funciones.php");
         $tipo = $_FILES["foto_fls"]["type"];    // verificamos la propiedad de que tipo es la imagen
 
-        $archivo = $_FILES["foto_fls"]["temp_name"];
+        $archivo = $_FILES["foto_fls"]["tmp_name"];
 
         $se_subio_imagen = subir_imagen($tipo, $archivo, $email);  // funcion de funciones.php
 
@@ -44,11 +44,10 @@
         
         // Ahora subimos el usuario a la BD
 
-        $consulta = "INSERT INTO contactos (email, nombre, sexo, nacimiento, telefono, pais, imagen) VALUES(
-            '$email','$nombre','$sexo','$nacimiento','$telefono','$pais','$imagen'
-        )";
-                                        // utf8 para no tener problema con caracteres.
-        $ejecutar_consulta = $conexion->query(utf8_encode($consulta));
+        $consulta = "INSERT INTO contactos (email,nombre,sexo,nacimiento,telefono,pais,imagen) VALUES ('$email','$nombre','$sexo','$nacimiento','$telefono','$pais','$imagen')";
+                                        
+                            // utf8 para no tener problema con caracteres.
+        $ejecutar_consulta = $conexion->query(($consulta));
 
         if($ejecutar_consulta){
             $mensaje = "Se ha dado de alta al contacto con el email: <b>$email</b>";
@@ -59,11 +58,10 @@
 
     }else{
         $mensaje = "No se pudo dar de alta al contacto: '<b>$email</b>' dado que ya existe.";
-
     }
 
     $conexion->close();
 
-    header("Location: ../index.php?op=alta&mensaje=$mensaje");
+    header("Location: ../index.php?op=Alta&mensaje=$mensaje");
     // Una vez registrado se regresa al formulario de agregado o erro como mensaje
 ?>

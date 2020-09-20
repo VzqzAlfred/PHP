@@ -10,29 +10,29 @@
     
 function borrar_imagenes_repetidas($ruta, $extension){
     switch($extension){
-        case '.jpg':
-            if(file_exists($ruta."png")){
+        case ".jpg":
+            if(file_exists($ruta.".png")){
                 unlink($ruta.".png");
             }
-            if(file_exists($ruta."gif")){
+            if(file_exists($ruta.".gif")){
                 unlink($ruta.".gif");
             }
         break;
 
-        case '.gif':
-            if(file_exists($ruta."png")){
+        case ".gif":
+            if(file_exists($ruta.".png")){
                 unlink($ruta.".png");
             }
-            if(file_exists($ruta."jpg")){
+            if(file_exists($ruta.".jpg")){
                 unlink($ruta.".jpg");
             }
         break;
 
-        case '.png':
-            if(file_exists($ruta."jpg")){
+        case ".png":
+            if(file_exists($ruta.".jpg")){
                 unlink($ruta.".jpg");
             }
-            if(file_exists($ruta."gif")){
+            if(file_exists($ruta.".gif")){
                 unlink($ruta.".gif");
             }
         break;
@@ -52,7 +52,7 @@ function borrar_imagenes_repetidas($ruta, $extension){
             //Si el archivo que sube el usuario es de tipo image, entonces se evalua la condicion
             
             // Para saber de que tipo de extensión es la imagen.
-            if(strstr($tipo, "jpég")){  // Si la imagen dice jpeg
+            if(strstr($tipo, "jpeg")){  // Si la imagen dice jpeg
                 $extension = ".jpg";
             }else if (strstr($tipo, "gif")){
                 $extension = ".gif";
@@ -76,7 +76,7 @@ function borrar_imagenes_repetidas($ruta, $extension){
                     al ancho nuevo que sera de 420
                 */
                 $nuevo_ancho_img = $ancho_img_deseado;
-                $nuevo_alto_img = ($alto_img/$ancho_img) * $nuevo_ancho_img;
+                $nuevo_alto_img = ($alto_img/$ancho_img)*$nuevo_ancho_img;
 
                 // Creo una imagen en color real con las nuevas dimensiones
                 $imagen_reajustada = imagecreatetruecolor($nuevo_ancho_img, $nuevo_alto_img);
@@ -84,7 +84,7 @@ function borrar_imagenes_repetidas($ruta, $extension){
                 // Creo una imagen basada en la original, dependiendo de su extensión es el tipo que creare.
                 
                 switch($extension){
-                    case '.jpg':
+                    case ".jpg":
                         $img_original = imagecreatefromjpeg($imagen);
                         // Reajusto la imagen nueva con respecto a la original.
                         imagecopyresampled($imagen_reajustada, $img_original, 0, 0, 0, 0, $nuevo_ancho_img, $nuevo_alto_img, $ancho_img, $alto_img);
@@ -99,7 +99,7 @@ function borrar_imagenes_repetidas($ruta, $extension){
                         borrar_imagenes_repetidas($nombre_img,".jpg");
                     break;
 
-                    case '.gif':
+                    case ".gif":
                         $img_original = imagecreatefromgif($imagen);
                         // Reajusto la imagen nueva con respecto a la original.
                         imagecopyresampled($imagen_reajustada, $img_original, 0, 0, 0, 0, $nuevo_ancho_img, $nuevo_alto_img, $ancho_img, $alto_img);
@@ -113,7 +113,7 @@ function borrar_imagenes_repetidas($ruta, $extension){
                         borrar_imagenes_repetidas($nombre_img,".gif");
                     break;
 
-                    case '.png':
+                    case ".png":
                         $img_original = imagecreatefrompng($imagen);
                         imagecopyresampled($imagen_reajustada, $img_original, 0, 0, 0, 0, $nuevo_ancho_img, $nuevo_alto_img, $ancho_img, $alto_img);
 

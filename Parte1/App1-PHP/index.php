@@ -3,22 +3,22 @@
 
     $op = $_GET["op"];
     switch($op){
-        case 'Alta':
+        case "Alta":
             $contenido = "PHP/Alta-contacto.php";
             $titulo = "Alta de contacto.";
         break;
 
-        case 'Baja':
+        case "Baja":
             $contenido = "PHP/Baja-contacto.php";
             $titulo = "Baja de contacto.";
         break;
 
-        case 'Cambios':
+        case "Cambios":
             $contenido = "PHP/Cambios-contacto.php";
             $titulo = "Cambio de contacto.";
         break;
 
-        case 'Consultas':
+        case "Consultas":
             $contenido = "PHP/Consultas-contacto.php";
             $titulo = "Consulta de contacto.";
         break;
