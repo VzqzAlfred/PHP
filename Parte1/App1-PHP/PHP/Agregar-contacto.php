@@ -10,7 +10,7 @@
     $pais = $_POST["pais_slc"];
 
     // Dependiendo el sexo ponemos una imagen predeterminada.
-    $imagen_generica = ($sexo == "M")?"img/pictures/amigo.png":"img/pictures/amiga.png"; 
+    $imagen_generica = ($sexo == "M")?"amigo.png":"amiga.png"; 
 
     // Verificamos que no exista previmiante el email del usuario en la BD
     include("Conexion.php");
@@ -47,13 +47,14 @@
         $consulta = "INSERT INTO contactos (email,nombre,sexo,nacimiento,telefono,pais,imagen) VALUES ('$email','$nombre','$sexo','$nacimiento','$telefono','$pais','$imagen')";
                                         
                             // utf8 para no tener problema con caracteres.
-        $ejecutar_consulta = $conexion->query(($consulta));
+        $ejecutar_consulta = $conexion->query(utf8_encode($consulta));
 
-        if($ejecutar_consulta){
+        if($ejecutar_consulta)
             $mensaje = "Se ha dado de alta al contacto con el email: <b>$email</b>";
-        }else{
+    
+        else
             $mensaje = "No se pudo dar de alta al contacto con el email: <b>$email</b>";
-        }
+        
 
 
     }else{

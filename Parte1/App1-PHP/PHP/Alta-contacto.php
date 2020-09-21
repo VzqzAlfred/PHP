@@ -1,4 +1,4 @@
-<form id="alta-contacto" name="alta_frm" action="/PHP/Agregar-contacto.php" method="post" enctype="multipart/form-data">
+<form id="alta-contacto" name="alta_frm" action="PHP/Agregar-contacto.php" method="post" enctype="multipart/form-data">
     <fieldset>
 
         <legend>Alta de contacto</legend>
@@ -14,8 +14,8 @@
 
         <div>
             <label for="m">Sexo: </label>
-            <input type="radio" id="m" class="cambio" name="sexo_rdo" title="Tu sexo" value="M" required> <label for="m">Masculino</label>
-            <input type="radio" id="m" class="cambio" name="sexo_rdo" title="Tu sexo" value="F" required> <label for="f">Femenino</label>
+            <input type="radio" id="m" name="sexo_rdo" title="Tu sexo" value="M" required> <label for="m">Masculino</label>
+            <input type="radio" id="f" name="sexo_rdo" title="Tu sexo" value="F" required> <label for="f">Femenino</label>
         </div>
 
         <div>

@@ -96,7 +96,7 @@ function borrar_imagenes_repetidas($ruta, $extension){
                                     // 100 es un parametro para que la imagen tenga la calidad de 100%
                         
                         // Ejecuto la función para borrar posibles imagenes dobles para el perfil.
-                        borrar_imagenes_repetidas($nombre_img,".jpg");
+                    borrar_imagenes_repetidas($nombre_img,".jpg");
                     break;
 
                     case ".gif":
@@ -110,7 +110,7 @@ function borrar_imagenes_repetidas($ruta, $extension){
                         imagegif($imagen_reajustada, $nombre_img_ext, 100);
                         
                         // Ejecuto la función para borrar posibles imagenes dobles para el perfil.
-                        borrar_imagenes_repetidas($nombre_img,".gif");
+                    borrar_imagenes_repetidas($nombre_img,".gif");
                     break;
 
                     case ".png":
