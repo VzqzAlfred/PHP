@@ -119,7 +119,7 @@ function borrar_imagenes_repetidas($ruta, $extension){
 
                         $nombre_img_ext = "../img/pictures/".$email.$extension;
                         $nombre_img = "../img/pictures/".$email;
-                        imagepng($imagen_reajustada, $nombre_img_ext, 100);
+                        imagepng($imagen_reajustada, $nombre_img_ext);
 
                         borrar_imagenes_repetidas($nombre_img,".png");
                     break;
