@@ -163,5 +163,6 @@ ul{
     color: #000;
     font-family: Helvetica, Verdana;
     font-size: 1.2em;
-    padding: 1em;
+    padding: .5em;
+    margin-left: 2em;
 }
