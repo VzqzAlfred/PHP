@@ -16,4 +16,6 @@
     }               
                 // utf8 para que no muestre caracteres extraños.
                 // option porque como va  aparecer dentro de la caja de opciones tienne que aparecer como value y dentro de la etiqueta
+
+    $conexion->close();
 ?>

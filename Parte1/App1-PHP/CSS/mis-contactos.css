@@ -142,7 +142,6 @@ ul{
     background: #EEE url(../img/boton-buscar.png) no-repeat 100% -4px;
     border: thin solid#F60;
     display: inline;
-    height: 300px;
     text-align: right;
 }
 
@@ -155,4 +154,14 @@ ul{
     /*Para que haga un cambio y tarde en cambiar de color*/
 .cambio{
     transition: all 2.0s ease-out;
+}
+
+
+.mensajes{
+    background: yellowgreen;
+    border-radius: .8em;
+    color: #000;
+    font-family: Helvetica, Verdana;
+    font-size: 1.2em;
+    padding: 1em;
 }
