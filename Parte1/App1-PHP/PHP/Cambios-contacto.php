@@ -23,7 +23,7 @@
             </select>
         </div>
         <?php
-            if($_GET["contacto_slc"]!==null){
+            if($_GET["contacto_slc"]!=null){
                 
                 $conexion2 =conectarse();
                 $contacto = $_GET["contacto_slc"];
