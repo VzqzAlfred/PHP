@@ -1,7 +1,12 @@
 <?php
-    include("Conexion.php");    //Incluimos el archivo de la conexion a la BD.
-    
-    
+    if(!$registro_contacto["pais"]){    // si no estamos en el modulo de cambios-contacto entonces, estamos en alta-contacto
+        include("Conexion.php");    
+                        //Incluimos el archivo de la conexion a la BD para que se vea en Alta
+    }  
+    /*Va en la condicional orque revisando el flujo de ir conectando a la BD es select-email y ya incluye la conexion
+    y después va a select pais lo cual ya ahi podemos evitar que se conecte a la BD
+    */
+
     // ordenar los países alfabeticamente de la tabla
     $consulta = "SELECT * FROM pais ORDER BY pais";
 
