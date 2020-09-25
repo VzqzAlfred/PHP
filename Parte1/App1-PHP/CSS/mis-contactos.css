@@ -74,6 +74,12 @@ input[type="number"]:focus, input[type="text"]:focus{
 }
 
 
+input[type="email"]:disabled{
+    background: transparent;
+    color: #CCC;
+}
+
+
 input[type="file"]{
     cursor: pointer;
     opacity: 0;
