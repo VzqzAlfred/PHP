@@ -15,9 +15,15 @@
 
         // es parecido al anterior con el while mysqli_fetch_array
     while($registro = $ejecutar_consulta->fetch_assoc()){
-    //    $nombre_pais = utf8_encode($registro["pais"]);        POR SI APARECEN CARACTERES
-        echo "<option value='".$registro["pais"]."'>".$registro["pais"]."</option>";
-    }   
+
+    $nombre_pais = $registro["pais"];        // utf8_encode()    POR SI APARECEN CARACTERES
+    echo "<option value='$nombre_pais'";
+        if(utf8_encode($nombre_pais) == $registro_contacto["pais"]){
+            echo " selected";
+        }
+    echo ">$nombre_pais</option>";
+    }    
+
             // concatenamos el nombre del pais que hay en la BD
 
 ?>
