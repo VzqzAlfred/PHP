@@ -53,5 +53,5 @@
 </div>
 
 <div>
-    <input type="submit" id="enviar-alta" class="cambio" name="enviar_btn" value="Agregar">
+    <input type="submit" id="enviar-alta" class="cambio" name="enviar_btn" value="Cambiar">
 </div>
